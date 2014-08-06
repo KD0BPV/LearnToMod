@@ -1,0 +1,22 @@
+[
+{
+  "modid": "LearnToMod",
+  "name": "Learn To Mod",
+  "description": "Following along with Pahimar's Let's Mod Reboot series on YouTube.",
+  "version": "1.0",
+  "mcversion": "1.7.10",
+  "url": "",
+  "updateUrl": "",
+  "authorList": [
+    "pahimar",
+    "LupusNoctu"
+  ],
+  "credits": "Thanks to Pahimar for the great series on YouTube!",
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+  ]
+}
+]

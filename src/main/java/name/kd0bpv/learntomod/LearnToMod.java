@@ -27,12 +27,12 @@ public class LearnToMod
     public void preInit(FMLPreInitializationEvent event)
     {
 		Log.info("Pre-initializing " + Reference.MOD_FULL_NAME);
-		Log.info("Loading config...");
+		Log.debug("Loading config...");
         Config.init(event.getSuggestedConfigurationFile());
 		FMLCommonHandler.instance().bus().register(new Config());
-		Log.info("Registering items...");
+		Log.debug("Registering items...");
 		ModItems.init();
-		Log.info("Registering blocks...");
+		Log.debug("Registering blocks...");
 		ModBlocks.init();
 		Log.info("Pre-initilization Complete.");
     }
@@ -41,7 +41,7 @@ public class LearnToMod
     public void init(FMLInitializationEvent event)
     {
 		Log.info(" Entering Initialization phase for " + Reference.MOD_FULL_NAME);
-		Log.info("Registering recipes...");
+		Log.debug("Registering recipes...");
 		ModRecipes.init();
 		Log.info("Initialization Complete.");
     }

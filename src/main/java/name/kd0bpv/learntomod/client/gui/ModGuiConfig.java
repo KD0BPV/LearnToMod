@@ -16,6 +16,7 @@ public class ModGuiConfig extends GuiConfig
 				Reference.MOD_ID,
 				false,
 				false,
-				GuiConfig.getAbridgedConfigPath(Config.cfg.toString()));
+				Reference.MOD_NAME + " Configuration"
+		);
 	}
 }

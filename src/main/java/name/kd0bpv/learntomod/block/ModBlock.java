@@ -33,12 +33,12 @@ public class ModBlock extends Block
 		blockIcon = iconRegister.registerIcon(this.getName());
 	}
 
-	public String getName()
+	protected String getName()
 	{
 		return String.format("%s:%s", Reference.MOD_ID, getBaseName());
 	}
 
-	public String getBaseName()
+	protected String getBaseName()
 	{
 		String name = super.getUnlocalizedName();
 		return name.substring(name.indexOf('.') +1);

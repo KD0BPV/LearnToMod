@@ -1,3 +1,19 @@
-item.LearnToMod:mapleLeaf.name=Maple Leaf
-tile.LearnToMod:flag.name=Canadian Flag
+# Items
+item.LearnToMod:dustTitanium.name=Titanium Dioxide Powder
+item.LearnToMod:ingotTitanium.name=Titanium Ingot
+
+# Tools/Weapons
+item.LearnToMod:swordTitanium.name=Titanium Sword
+item.LearnToMod:pickaxeTitanium.name=Titanium Pickaxe
+item.LearnToMod:axeTitanium.name=Titanium Axe
+item.LearnToMod:shovelTitanium.name=Titanium Shovel
+item.LearnToMod:hoeTitanium.name=Titanium Hoe
+item.LearnToMod:shearsTitanium.name=Titanium Shears
+
+# Armor
+
+# Blocks
+tile.LearnToMod:rutile.name=Rutile Ore
+
+# Creative Tabs
 itemGroup.LearnToMod=Learn to Mod!

@@ -22,8 +22,8 @@ group = "name.kd0bpv.learntomod" // http://maven.apache.org/guides/mini/guide-na
 archivesBaseName = "LearnToMod"
 
 minecraft {
-    version = "1.7.10-10.13.0.1197"
-    //assetDir = "run/assets"
+    version = "1.7.10-10.13.0.1205"
+    runDir = "run"
 }
 
 dependencies {

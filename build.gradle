@@ -15,14 +15,41 @@ buildscript {
     }
 }
 
+repositories {
+    maven {
+        name 'DVS1 Maven FS'
+        url 'http://dvs1.progwml6.com/files/maven'
+    }
+    maven {
+        name "CB Maven FS"
+        url "http://chickenbones.net/maven/"
+    }
+    maven {
+        name "ForgeFS"
+        url 'http://files.minecraftforge.net/maven'
+    }
+    maven {
+        name "ProfMobius Maven FS"
+        url "http://mobiusstrip.eu/maven"
+    }
+}
+
 apply plugin: 'forge'
 
-version = "1.7.10-1.0"
+ext.configFile = file "build.properties"
+
+configFile.withReader {
+    def prop = new Properties()
+    prop.load(it)
+    project.ext.config = new ConfigSlurper().parse prop
+}
+
+version = "${config.minecraft_version}-${config.mod_version}"
 group = "name.kd0bpv.learntomod" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
 archivesBaseName = "LearnToMod"
 
 minecraft {
-    version = "1.7.10-10.13.0.1205"
+    version = "${config.minecraft_version}-${config.forge_version}"
     runDir = "run"
 }
 
@@ -39,7 +66,11 @@ dependencies {
     // for more info...
     // http://www.gradle.org/docs/current/userguide/artifact_dependencies_tutorial.html
     // http://www.gradle.org/docs/current/userguide/dependency_management.html
-
+    compile "codechicken:CodeChickenLib:${config.minecraft_version}-${config.cclib_version}:dev"
+    compile "codechicken:CodeChickenCore:${config.minecraft_version}-${config.cccore_version}:dev"
+    compile "codechicken:NotEnoughItems:${config.minecraft_version}-${config.nei_version}:dev"
+    compile "mantle:Mantle:${config.minecraft_version}-${config.mantle_version}:deobf"
+    compile "tconstruct:TConstruct:${config.minecraft_version}-${config.tconstruct_version}:deobf"
 }
 
 processResources
